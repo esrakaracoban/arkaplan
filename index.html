@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arkaplan</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <button> Arka Planı Değiştir</button>
+    <script>
+        const body=document.querySelector("body");
+        const button=document.querySelector("button");
+        const colors=["black","blue","yellow","red","purple","green","orange","grey"];
+        button.addEventListener("click",changeBackground);
+        let sira=0;
+        function changeBackground(){
+            if(sira==8)sira=0;
+        
+            const secilenRenk=colors[sira]; sira++;
+            body.style.backgroundColor=secilenRenk;
+        }
+    </script>
+</body>
+</html>
